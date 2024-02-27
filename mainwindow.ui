@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>502</width>
+    <height>474</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTreeView" name="treeView">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>501</width>
+      <height>431</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>502</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="purchaseMenu">
+    <property name="title">
+     <string>Purchase</string>
+    </property>
+    <addaction name="actionAddPurchase"/>
+   </widget>
+   <widget class="QMenu" name="itemMenu">
+    <property name="title">
+     <string>Item</string>
+    </property>
+    <addaction name="actionAddItem"/>
+   </widget>
+   <widget class="QMenu" name="menuRestore">
+    <property name="title">
+     <string>Restore</string>
+    </property>
+    <addaction name="actionRestoreItemList"/>
+   </widget>
+   <addaction name="purchaseMenu"/>
+   <addaction name="itemMenu"/>
+   <addaction name="menuRestore"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAddPurchase">
+   <property name="text">
+    <string>Add Purchase</string>
+   </property>
+  </action>
+  <action name="actionAddItem">
+   <property name="text">
+    <string>Add Item</string>
+   </property>
+  </action>
+  <action name="actionRestoreItemList">
+   <property name="text">
+    <string>Restore Item List</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
