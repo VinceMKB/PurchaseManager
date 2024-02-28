@@ -1,8 +1,17 @@
 
 #include "itemlistmemento.h"
 
-ItemListMemento::ItemListMemento()
+ItemListMemento::ItemListMemento() : state(QStringList())
 {
 
 }
 
+ItemListMemento::ItemListMemento(const QStringList &state) : state(state)
+{
+
+}
+
+QStringList ItemListMemento::getState() const
+{
+    return state;
+}

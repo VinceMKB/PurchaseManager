@@ -102,7 +102,7 @@
     <string>Check Out</string>
    </property>
   </widget>
-  <widget class="QListView" name="listView">
+  <widget class="QListView" name="listViewPurchase">
    <property name="geometry">
     <rect>
      <x>10</x>

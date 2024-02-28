@@ -2,6 +2,10 @@
 #define NEWITEMDIALOG_H
 
 #include <QDialog>
+#include <QFile>
+#include <QTextStream>
+#include <QMessageBox>
+
 
 namespace Ui {
 class newItemDialog;
@@ -17,6 +21,11 @@ public:
 
 private:
     Ui::newItemDialog *ui;
+
+private slots:
+    void addItem();
+    void done();
+
 };
 
 #endif // NEWITEMDIALOG_H
