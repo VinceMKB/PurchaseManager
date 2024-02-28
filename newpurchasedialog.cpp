@@ -35,7 +35,7 @@ newPurchaseDialog::newPurchaseDialog(QStandardItemModel *npd_model, QWidget *par
     }
 
     connect(ui->buttonAddPuchase, &QPushButton::clicked, this, &newPurchaseDialog::addPurchase);
-    connect(ui->buttonAddPuchase, &QPushButton::clicked, this, &newPurchaseDialog::addPurchase);
+    connect(ui->buttonCheckOut, &QPushButton::clicked, this, &newPurchaseDialog::checkout);
 }
 
 newPurchaseDialog::~newPurchaseDialog()
@@ -69,7 +69,7 @@ void newPurchaseDialog::addPurchase()
     QStandardItem *customerItem = nullptr;
     for(int i = 0; i < npd_treemodel->rowCount(); ++i)
     {
-        if(npd_treemodel->item(i)->text()== customerName)
+        if(npd_treemodel->item(i)->text() == customerName)
         {
             customerItem = npd_treemodel->item(i);
             break;
@@ -82,7 +82,7 @@ void newPurchaseDialog::addPurchase()
         npd_treemodel->appendRow(customerItem);
     }
 
-    QStandardItem *datetimeItem = new QStandardItem(currentDateTime.toString("yyyyy-MM-dd HH:mm"));
+    QStandardItem *datetimeItem = new QStandardItem(currentDateTime.toString("yyyy-MM-dd HH:mm"));
     customerItem->appendRow(datetimeItem);
 
     //Splits stocktypeName into parts
@@ -92,9 +92,13 @@ void newPurchaseDialog::addPurchase()
 
     QStandardItem *purchaseTypeItem = new QStandardItem(purchaseType);
     QStandardItem *itemTypeItem = new QStandardItem(itemType);
-    QStandardItem *stockQuantityItem = new QStandardItem(stockQuantity);
+    QStandardItem *stockQuantityItem = new QStandardItem(QString::number(stockQuantity));
+
+    qDebug() << "StockQuantity: " << stockQuantity;
+    qDebug() << "StockQuantityItem: " << stockQuantityItem;
 
     datetimeItem->appendRow({purchaseTypeItem, itemTypeItem, stockQuantityItem});
+
 }
 
 void newPurchaseDialog::checkout()

@@ -44,9 +44,9 @@ private:
     QThread *workerthread;
 
 private slots:
-    void actionAddPurchase();
-    void actionAddItem();
-    void restoreItemList();
+    void actionAddPurchase_Slot();
+    void actionAddItem_Slot();
+    void actionrestoreItemList_Slot();
 
 signals:
     void dataAdded();
