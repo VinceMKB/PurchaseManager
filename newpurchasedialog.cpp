@@ -42,3 +42,64 @@ newPurchaseDialog::~newPurchaseDialog()
 {
     delete ui;
 }
+
+void newPurchaseDialog::addPurchase()
+{
+    //Getting input of the fields
+    QString customerName = ui->lineEditCustomerName->text();
+    QString stocktypeName = ui->comboBoxItemInStock->currentText();
+    int stockQuantity = ui->spinBoxQuantity->value();
+
+    //Validation Check. Did not check stockQuantity since I set the default value and minimum value already
+    if(customerName.isEmpty()|| stocktypeName.isEmpty())
+    {
+        QMessageBox::warning(this, "INPUT ERROR", "Please fill in all the fields correctly.");
+        return;
+    }
+
+    //Getting Current System time and date
+    QDateTime currentDateTime = QDateTime::currentDateTime();
+
+    //Update the QStringListModel
+    QStringList currentlist = npd_listmodel->stringList();
+    currentlist << QString("%1 - %2").arg(stocktypeName).arg(stockQuantity);
+    npd_listmodel->setStringList(currentlist);
+
+    //Insert values into QTreeView
+    QStandardItem *customerItem = nullptr;
+    for(int i = 0; i < npd_treemodel->rowCount(); ++i)
+    {
+        if(npd_treemodel->item(i)->text()== customerName)
+        {
+            customerItem = npd_treemodel->item(i);
+            break;
+        }
+    }
+
+    if(!customerItem)
+    {
+        customerItem = new QStandardItem(customerName);
+        npd_treemodel->appendRow(customerItem);
+    }
+
+    QStandardItem *datetimeItem = new QStandardItem(currentDateTime.toString("yyyyy-MM-dd HH:mm"));
+    customerItem->appendRow(datetimeItem);
+
+    //Splits stocktypeName into parts
+    QStringList parts = stocktypeName.split(" - ");
+    QString purchaseType = parts[0];
+    QString itemType = parts[1];
+
+    QStandardItem *purchaseTypeItem = new QStandardItem(purchaseType);
+    QStandardItem *itemTypeItem = new QStandardItem(itemType);
+    QStandardItem *stockQuantityItem = new QStandardItem(stockQuantity);
+
+    datetimeItem->appendRow({purchaseTypeItem, itemTypeItem, stockQuantityItem});
+}
+
+void newPurchaseDialog::checkout()
+{
+    this->close();
+}
+
+
