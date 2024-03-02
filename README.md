@@ -8,9 +8,9 @@ This GUI application was an assignment for an Advanced Programming Course, showc
 - Networking using QUdpSocket for sending the purchase list in XML to the reciever application.
 - Threading to make sure the list is sent before new data can be added to the list.
 
-**Note:** The reciever application is in a different repository.[link]
+**Note:** The reciever application is in a different repository. [https://github.com/VinceMKB/PurchaseManagerReciever.git]
 
-## Application GUI Screenshots [Add Pics]
+## Application GUI Screenshots
 - ![image](https://github.com/VinceMKB/Qt-Book-Store-Purchase-Manager/assets/155303838/04eb894d-403e-4811-93a0-9a192619b4a4)
 - ![image](https://github.com/VinceMKB/Qt-Book-Store-Purchase-Manager/assets/155303838/4dd7d554-ec1f-45b5-b707-d2a8474979e5)
 - ![image](https://github.com/VinceMKB/Qt-Book-Store-Purchase-Manager/assets/155303838/1918868e-095c-455d-9843-5a5ff28c5da3)
