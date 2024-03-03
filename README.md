@@ -24,7 +24,7 @@ To restore to previous item list, click ont the 'Restore' menu and click on 'Res
 To add a purchase, click on the 'Purchase' menu and click on 'Add Purchase'. After each data entry for each purchase click on the 'ADD PURCHASE' to add the purchase to the list. Once all purchases are added to the list click on 'CHECK OUT' to close the dialog.
 
 ### How To Use Reciever Application
-The application just needs to be running for it to work. When the display updates with new data the main application will send the list to the reciever in XML format for it to display.
+When you click on 'CHECK OUT' in the new purchase dialog it will send the list to the reciever application. If the the reciever application is running it will display the list in XML format.
 
 ## Getting Started
 ### Dependencies
