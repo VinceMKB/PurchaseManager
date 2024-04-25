@@ -11,10 +11,10 @@ This GUI application was an assignment for an Advanced Programming Course, showc
 **Note:** The reciever application is in a different repository. [https://github.com/VinceMKB/PurchaseManagerReciever.git]
 
 ## Application GUI Screenshots
-#### ![image](https://github.com/VinceMKB/Qt-Book-Store-Purchase-Manager/assets/155303838/04eb894d-403e-4811-93a0-9a192619b4a4)
-#### ![image](https://github.com/VinceMKB/Qt-Book-Store-Purchase-Manager/assets/155303838/4dd7d554-ec1f-45b5-b707-d2a8474979e5)
-#### ![image](https://github.com/VinceMKB/Qt-Book-Store-Purchase-Manager/assets/155303838/1918868e-095c-455d-9843-5a5ff28c5da3)
-#### ![image](https://github.com/VinceMKB/Qt-Book-Store-Purchase-Manager/assets/155303838/48909a5c-c58f-484e-a029-33028d83fbea)
+![image](https://github.com/VinceMKB/Qt-Book-Store-Purchase-Manager/assets/155303838/04eb894d-403e-4811-93a0-9a192619b4a4)
+![image](https://github.com/VinceMKB/Qt-Book-Store-Purchase-Manager/assets/155303838/4dd7d554-ec1f-45b5-b707-d2a8474979e5)
+![image](https://github.com/VinceMKB/Qt-Book-Store-Purchase-Manager/assets/155303838/1918868e-095c-455d-9843-5a5ff28c5da3)
+![image](https://github.com/VinceMKB/Qt-Book-Store-Purchase-Manager/assets/155303838/48909a5c-c58f-484e-a029-33028d83fbea)
 ### How To USE Main Application
 #### Adding Item:
 To add a new item to the item list, click on the 'Item' menu and click on 'Add Item'. After filling the name and stock type click 'ADD' button which will clear the fields and add the item to the item list. Once done adding all the new items to the stocklist click 'DONE' to close the dialog.
