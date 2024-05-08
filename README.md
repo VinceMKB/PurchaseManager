@@ -5,10 +5,10 @@ This GUI application was an assignment for an Advanced Programming Course, showc
 ## Features
 - Memento Design pattern to restore the item list.
 - Converting the list into XML form.
-- Networking using QUdpSocket for sending the purchase list in XML to the reciever application.
+- Networking using QUdpSocket for sending the purchase list in XML to the receiver application.
 - Threading to make sure the list is sent before new data can be added to the list.
 
-**Note:** The reciever application is in a different repository. [https://github.com/VinceMKB/PurchaseManagerReciever.git]
+**Note:** The reciever application is in a different repository. [https://github.com/VinceMKB/PurchaseManagerReceiver.git]
 
 ## Application GUI Screenshots
 ![image](https://github.com/VinceMKB/Qt-Book-Store-Purchase-Manager/assets/155303838/04eb894d-403e-4811-93a0-9a192619b4a4)
